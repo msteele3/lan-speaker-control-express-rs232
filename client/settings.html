@@ -1,0 +1,28 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is an AV Controller Application">
+    <meta name="author" content="Matt Steele">
+    <meta name="keywords" content="AV Controller">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <link href="assets/styles.css" rel="stylesheet">
+    <script type="text/javascript" src="main.js"></script>
+    <title>AV Controller</title>
+</head>
+
+<body>
+    <div class="settings-container">
+        <button class="home-button user-button" onclick="location.href='index.html'">Home</button>
+        <div class="ip-header sub-display-area">
+            <h2>Enter IP</h2>
+        </div>
+        <div class="head-socket sub-display-area">
+            <h2>Enter Port</h2>
+        </div>
+        <input class="ip-input input-text" id="ip-input" type="text" />
+        <input class="socket-input input-text" id="port-input" type="text" />
+        <button class="submit-button user-button" onclick="updatePortData()">Submit</button>
+    </div>
+
+
+</body>

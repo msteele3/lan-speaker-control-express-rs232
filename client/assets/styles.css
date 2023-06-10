@@ -1,0 +1,224 @@
+html, body {
+    overflow: hidden;
+}
+
+body {
+    background-color: #333333;
+}
+
+.header {
+    grid-area: header;
+    font-size: 1.2em;
+}
+
+.user-button {
+    border-style: solid;
+    border-color: #b4ab9e;
+    border-width: 9px;
+}
+
+.user-button:hover {
+    background: #dad6d6;
+}
+
+.user-button:active {
+    background: #cfcdcd;
+}
+
+.zone-title {
+    grid-area: zone-sel-title;
+
+}
+
+.source-title {
+    grid-area: source-sel-title;
+
+}
+
+.off-button {
+    grid-area: off;
+    font-size: 1.5em;
+    color: black;
+    text-align: center;
+    border-style: solid;
+    border-color: #b4ab9e;
+
+}
+
+.on-button {
+    grid-area: on;
+    font-size: 1.5em;
+    color: black;
+    text-align: center;
+    border-style: solid;
+    border-color: #b4ab9e;
+
+}
+
+.source-dropdown {
+    grid-area: source-sel;
+    font-size: 1.6em;
+    background: #eeeeee;
+    color: black;
+    text-align: center;
+}
+
+.zone-dropdown {
+    grid-area: zone-sel;
+    font-size: 1.6em;
+    background: #eeeeee;
+    color: black;
+    text-align: center;
+}
+
+.mute-button {
+    grid-area: mute;
+    font-size: 2em;
+
+}
+
+.volume-up-button {
+    grid-area: vol-up;
+    font-size: 2em;
+
+}
+
+.volume-down-button {
+    grid-area: vol-down;
+    font-size: 2em;
+
+}
+
+.volume-display {
+    grid-area: vol-out;
+}
+
+.source-display {
+    grid-area: source-out;
+}
+
+.display-area {
+    background-color: #eeeeee;
+    color: black;
+    text-align: center;
+    border-style: solid;
+    border-color: #b4ab9e;
+    border-width: 9px;
+}
+
+.settings-button {
+    grid-area: settings;
+    font-size: 2em;
+}
+
+.sub-display-area {
+    background-color: #eeeeee;
+    color: black;
+    text-align: center;
+    border-style: solid;
+    border-color: #b4ab9e;
+    border-width: 9px;
+    font-size: 1.3em;
+}
+
+.ip-header {
+    grid-area: head-ip;
+}
+
+.head-socket {
+    grid-area: head-socket
+}
+
+.ip-input {
+    grid-area: enter-ip;
+}
+
+.socket-input {
+    grid-area: enter-socket;
+}
+
+.submit-button {
+    grid-area: submit;
+    font-size: 2em;
+
+}
+
+.input-text {
+    font-size: 1.4em;
+}
+
+.home-button {
+    grid-area: home;
+    font-size: 2em;
+
+}
+
+
+
+
+.settings-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-areas:
+        ". . home home . ."
+        ". . head-ip head-socket . ."
+        ". . enter-ip enter-socket . ."
+        ". . submit submit . .";
+}
+
+
+/* Styles for screens that are 480px wide or smaller */
+  
+  /* Styles for screens that are between 481px and 768px wide */
+  @media (max-width: 768px) {
+    /* CSS rules go here */
+    .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(1fr);
+        grid-gap: 10px;
+        grid-template-areas:
+            /* Only change code below this line. This designates the places as cetain spots for the grid. Period meand
+        blank cell */
+            "header header "
+            "zone-sel-title zone-sel-title"
+            "zone-sel zone-sel"
+            "off on"
+            "source-sel-title source-sel-title"
+            "source-sel source-sel"
+            "mute mute"
+            "vol-down vol-up"
+            "vol-out vol-out"
+            "source-out source-out"
+            "settings settings";
+        /* Only change code above this line */
+        
+    }
+  }
+  
+  /* Styles for screens that are between 769px and 1024px wide */
+  @media (min-width: 769px) {
+    .container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 10px;
+        grid-template-areas:
+            /* Only change code below this line. This designates the places as cetain spots for the grid. Period meand
+        blank cell */
+            ". header header . settings"
+            "zone-sel-title off on source-sel-title source-sel-title"
+            "zone-sel mute mute source-sel source-sel"
+            ". vol-down vol-up . ."
+            ". vol-out vol-out . ."
+            ". source-out source-out . .";
+        /* Only change code above this line */
+        
+    }
+    /* CSS rules go here */
+  }

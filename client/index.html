@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="This is an AV Controller Application">
+    <meta name="author" content="Matt Steele">
+    <meta name="keywords" content="AV Controller">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/logo.png" />
+    <link href="assets/styles.css" rel="stylesheet">
+    <script type="text/javascript" src="main.js"></script>
+    <title>AV Controller 2.0</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header display-area">
+        <h1>AV Controller</h1>
+        </div>
+        <button class=" settings-button user-button" id="power_on" onclick="location.href='settings.html'">Settings</button>
+        <div class="zone-title sub-display-area">
+            <h2>Select Zone</h2>
+        </div>
+        <div class="source-title sub-display-area">
+            <h2>Select Source</h2>
+        </div>
+        <select id="zone-dropdown-menu" class="zone-dropdown" onchange="updateDisplay()">
+            <option value="zone1">Ballroom</option>
+            <option value="zone2">Dining Room</option>
+            <option value="zone3">Library</option>
+            <option value="zone4">Master Closet</option>
+            <option value="zone5">Master Bath</option>
+            <option value="zone6">Upstairs</option>
+            <option value="zone7">Basement Hall</option>
+            <option value="zone8">Basement Card Table</option>
+            <option value="zone9">Rear Gym</option>
+            <option value="zone10">Gathering Room</option>
+            <option value="zone11">Statue Garden</option>
+            <option value="zone12">Empty</option>
+            <option value="allOne">Main Floor Zones</option>
+            <option value="allTwo">Basement/Outdoor</option>
+        </select>
+        <button class="on-button user-button" id="power_on" onclick="powerOn()">Power On</button>
+        <button class="off-button user-button" id="power_off" onclick="powerOff()">Power Off</button>
+        <select id="source-dropdown-menu" class="source-dropdown" onchange="updateSource()">
+            <option value="source1">WXC-50</option>
+            <option value="source2">RXA2060 Zone 2</option>
+            <option value="source3">RX-A2060 Zone 3</option>
+            <option value="source4">Xfinity</option>
+        </select>
+        <button class="mute-button user-button" id="mute" onclick="onClickMute()">Mute</button>
+        <button class="volume-up-button user-button" id="volume_up" onclick="onVolumeUp()">+</button>
+        <button class="volume-down-button user-button" id="volume_down" onclick="onVolumeDown()">-</button>
+        <div class="volume-display sub-display-area">
+            <h2 id="volume-output">Volume: NA</h2>
+        </div>
+    </div>
+</body>
+</html>
